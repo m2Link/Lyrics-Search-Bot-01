@@ -20,7 +20,7 @@ Ek = Client(
 @Ek.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     TEXT = "Hai {} \n\n**I Am Lyrics Search Bot. Send Me A Song Name, I Will Give You The Lyrics. ** \n\nFor Know More /help"
-    BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")],[InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Lyrics-Search-Bot"),InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Lyrics-Search-Bot")],[InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")]])
+    BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton("💬 Update Channel", url = "https://t.me/m2botz"),InlineKeyboardButton("🗣 Support Group", url = "https://t.me/m2botzsupport")],[InlineKeyboardButton('About😎', callback_data='about'),InlineKeyboardButton('Help⚙', callback_data='help')],[InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")]])
     await update.reply_text(
         text=TEXT.format(update.from_user.mention),
         reply_markup=BUTTONS,
